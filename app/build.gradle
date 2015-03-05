@@ -30,12 +30,17 @@ android {
 		sourceCompatibility JavaVersion.VERSION_1_7
 		targetCompatibility JavaVersion.VERSION_1_7
 	}
+
+	packagingOptions {
+		exclude 'META-INF/LICENSE.txt'
+	}
 }
 
 dependencies {
 	compile fileTree(dir: 'libs', include: ['*.jar'])
 	compile 'com.android.support:appcompat-v7:21.0.3'
 
+	compile "org.glassfish:javax.annotation:10.0-b28"
 	compile "org.mapstruct:mapstruct:1.0.0-SNAPSHOT"
 	compile "org.mapstruct:mapstruct-processor:1.0.0-SNAPSHOT"
 }
